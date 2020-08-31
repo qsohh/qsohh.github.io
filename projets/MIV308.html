@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="description" content="personnal page of Hao HUANG">
+	<meta name="keywords" content="Hao HUANG, ingénieur mécanicien junior">
+	<meta name="author" content="Hao HUANG">
+	<meta name="Date-Creation-yyyymmdd" content="20200831">
+	<!-- Created by Hao HUANG, 31 aout 2020 -->
+	<meta name="Date-Revision-yyyymmdd" content="20200831">
+
+	<title>Traitement d'image - HUANG Hao, Junior Engineer</title>
+	<link rel="shortcut icon" type="image/x-icon" href="./site_icon.ico">
+</head>
+
+<body>
+	<h1>Traitement d'image - détection d'obstacle et des marquages</h1>
+	<p>par stéréovision</p>
+	<hr />
+	<p>Les images initiales : </p>
+	<img src="../demonstration/MIV308/01G.png"  alt="01g" width="330">
+	<img src="../demonstration/MIV308/01D.png"  alt="01d" width="330">
+	<p>Filtrées par ouvertures/détection de bord, fig. v-disparité : </p>
+	<img src="../demonstration/MIV308/gd_ouvert.jpg"  alt="gd_ouvert" width="660">
+	<img src="../demonstration/MIV308/v_dis.jpg"  alt="v_dis" width="91">
+	<p>Représentée dans l'espace de Hough pour déterter la ligne des marquages et puis décider de l'obstacle : </p>
+	<p>(Gauche : dans le cercle rouge, la ligne projetée dans l'espace de Hough comme le point)</p>
+	<p>(Droite : la ligne rouge représente les marquages et la carrée verte représente l'obstacle déterté)</p>
+	<img src="../demonstration/MIV308/hough.jpg"  alt="hough" width="90">
+	<img src="../demonstration/MIV308/color_vdis.jpg"  alt="color_vdis" width="91">
+	<p>Disparitée colorée et représentation des marquages et de l'obstacle : </p>
+	<p>(Gauche : rouge -> blue, proche -> loin )</p>
+	<p>(Droite : zone rouge : marquage, zone jaune : route, zone griss : route occupée, carrée verte : obstacle)</p>
+	<img src="../demonstration/MIV308/color_disp.jpg"  alt="color_disp" width="330">
+	<img src="../demonstration/MIV308/carte_marq.jpg"  alt="carte_marq" width="330">
+	<p>Le résultat final : </p>
+	<img src="../demonstration/MIV308/result.jpg"  alt="result" width="330">
+
+
+
+	<hr />
+	<p><a href="../index.html">Retour à l'acceuil</a></p>
+</body>
