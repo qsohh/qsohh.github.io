@@ -1,0 +1,44 @@
+{
+  "sidebar": [
+    {
+      "name": "Introduction",
+      "name_fr": "Introduction",
+      "url": "#",
+      "markdown_en": "content/en/introduction.md",
+      "markdown_fr": "content/fr/introduction_fr.md"
+    },
+    {
+      "name": "Education",
+      "name_fr": "Formation",
+      "url": "#",
+      "markdown_en": "content/en/formation.md",
+      "markdown_fr": "content/fr/formation_fr.md"
+    },
+    {
+      "name": "Experience",
+      "name_fr": "Expérience",
+      "url": "#",
+      "markdown_en": "content/en/experience.md",
+      "markdown_fr": "content/fr/experience_fr.md",
+      "subsections": [
+        {
+          "name": "Experience 1",
+          "name_fr": "Expérience 1",
+          "url": "#",
+          "markdown_en": "content/en/experience1.md",
+          "markdown_fr": "content/fr/experience1_fr.md"
+        },
+        {
+          "name": "Experience 2",
+          "name_fr": "Expérience 2",
+          "url": "#",
+          "markdown_en": "content/en/experience2.md",
+          "markdown_fr": "content/fr/experience2_fr.md"
+        }
+      ]
+    }
+  ],
+
+  "defaultmain_content_en": "content/en/introduction.md",
+  "defaultmain_content_fr": "content/fr/introduction_fr.md"
+}
