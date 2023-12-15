@@ -146,6 +146,26 @@
                             loadMarkdown(markdownFile);
                         };
                         nav_links.appendChild(link);
+
+                        // check if the current navItem has subsections
+                        if (navItem.subsections && navItem.subsections.length > 0) {
+                            var sublist = document.createElement('ul'); // 使用列表来表示子部分
+                            navItem.subsections.forEach(subsection => {
+                                var sublink = document.createElement('a');
+                                sublink.href = subsection.url;
+                                sublink.textContent = currentLanguage === 'en' ? subsection.name : subsection.name_fr;
+                                sublink.onclick = function (e) {
+                                    e.preventDefault();
+                                    // 根据当前语言加载对应的 Markdown 文件
+                                    const markdownFile = currentLanguage === 'en' ? subsection.markdown_en : subsection.markdown_fr;
+                                    loadMarkdown(markdownFile);
+                                };
+                                var listItem = document.createElement('li');
+                                listItem.appendChild(sublink);
+                                sublist.appendChild(listItem);
+                            });
+                        nav_links.appendChild(sublist);
+                        }
                     });
                     // 加载默认的 Markdown 文件
                     const defaultMarkdownFile = currentLanguage === 'en' ? data.defaultmain_content_en : data.defaultmain_content_fr;

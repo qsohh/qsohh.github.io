@@ -8,6 +8,13 @@
       "markdown_fr": "content/fr/introduction_fr.md"
     },
     {
+      "name": "CV",
+      "name_fr": "CV",
+      "url": "#",
+      "markdown_en": "content/en/cv.md",
+      "markdown_fr": "content/fr/cv_fr.md"
+    },
+    {
       "name": "Education",
       "name_fr": "Formation",
       "url": "#",
