@@ -23,6 +23,12 @@ Hao HUANG
 - Developed a probabilistic approach for calculating railway gauge using Wilks' quantile.
 - Monte Carlo simulations, incorporating mechanics, random variable generation, and probabilistic analysis.
 
+### Teaching Assistant - Université de Bourgogne (Jan. 2022 - Apr. 2022)
+- Assisted in the course "Scientific Calculation" of a class of M1 students.
+
+### Teaching Assistant - ENSTA Paris (Jan. 2020 – Mar. 2020)
+- Assisted in the MIV305 course on "Motorization and Hybridization" for 3rd-year engineering students.
+
 ## Languages and IT Skills
 - Languages: Chinese (Native), English, French
 - Programming: Python, C++, R, Java
@@ -40,6 +46,7 @@ Hao HUANG
 
 ### Université Claude Bernard Lyon 1 / Wuhan University
 - Bachelor in Mechanics / Bachelor in Physics (2012 – 2016)
+  - Selected for the exchange program.
 
 ## Publication
-- Journal paper: "HHT-α and TR-BDF2 schemes for dynamic contact problems." *Comput Mech* (2023). [https://doi.org/10.1007/s00466-023-02405-9](https://doi.org/10.1007/s00466-023-02405-9)
+- Journal paper: "HHT-α and TR-BDF2 schemes for dynamic contact problems." *Comput Mech* (2023). [https://doi.org/10.1007/s00466-023-02405-9](https://doi.org/10.1007/s00466-023-02405-9) \[ [PDF](https://hal.science/hal-04021471v3) \]
