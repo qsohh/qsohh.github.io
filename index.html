@@ -3,6 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Hao HUANG">
+    <meta name="information" content="copyright (c) 2023 Hao HUANG. All rights reserved. Content on this site is provided for informational purposes only and is not intended to be copied or replicated without permission.">
     <title>HH's Git page'</title>
     <style>
         /* config of main page */
@@ -69,7 +71,7 @@
     <div id="sidebar">
         <!-- language switch -->
         <div id="language-switch">
-            <a href="#en" onclick="switchLanguage('en')">EN</a> | <a href="#fr" onclick="switchLanguage('fr')">FR</a>
+            <a href="?lang=en" onclick="switchLanguage('en')">EN</a> | <a href="?lang=fr" onclick="switchLanguage('fr')">FR</a>
         </div>
 
         <figure>
@@ -88,22 +90,23 @@
     </div>
 
     <!-- 引入Marked.js库 -->
-    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <!-- This third-party lib uses MIT License, see https://github.com/markedjs/marked and https://github.com/markedjs/marked/blob/master/LICENSE.md -->
+    <script src="lib/marked.min.js"></script>
     <script>
         // JavaScript 函数用于加载并显示Markdown文件
         function loadMarkdown(filePath) {
             fetch(filePath)
                 .then(response => {
-                    // 检查响应状态
+                    // check if the file is found
                     if (!response.ok) {
                         throw new Error(`HTTP error! status: ${response.status}`);
                     }
                     return response.text();
                 })
                 .then(markdown => {
-                    console.log("Markdown:", markdown);
+                    // console.log("Markdown:", markdown);
                     const html = marked.marked(markdown);
-                    console.log("Converted HTML:", html);
+                    // console.log("Converted HTML:", html);
                     document.getElementById('main-content').innerHTML = marked.marked(markdown);
                 })
                 .catch(error => {
@@ -116,29 +119,30 @@
     <script>
         // 当页面加载完成时，调用此函数
         var currentLanguage = 'en'; // EN is the default language and as we are working with index.html
+        var currentContent = 'Introduction'; // introduction.md is the default content
 
         function switchLanguage(language) {
             currentLanguage = language; // 更新当前语言
-            // 这里可以添加更多逻辑来更新页面内容，比如重新加载Markdown文件
-            // 假设你有一个函数叫做 loadContent，它会根据当前语言加载内容
-            loadContent();
+            // first reload the sidebar, then reload the content
+            loadSidebar();
+            loadContent(currentContent);
         }
 
-        function loadContent() {
-            // 假设你的导航项存储在一个全局变量或者某处可以访问的地方
+        function loadSidebar() {
+            // the navigation is stored in a JSON file "navigation.json"
             fetch('navigation.json')
-                .then(response => response.json()) // 解析 JSON
+                .then(response => response.json()) // access and parse the JSON data
                 .then(data => {
-                    console.log(data); // 查看获取到的数据
+                    // console.log(data); // log the data to the console
                     // 获取 nav-links 容器
                     const nav_links = document.getElementById('nav-links');
                     // clear nav-links
                     nav_links.innerHTML = '';
-                    
+
                     // 获取 sidebar 数组并遍历每个导航项
                     data.sidebar.forEach(navItem => {
                         const link = document.createElement('a');
-                        link.href = navItem.url;
+                        link.href = navItem.url + "&lang=" + currentLanguage;
                         link.textContent = currentLanguage === 'en' ? navItem.name : navItem.name_fr;
 
                         link.onclick = function (e) {
@@ -146,6 +150,8 @@
                             // 根据当前语言加载对应的 Markdown 文件
                             const markdownFile = currentLanguage === 'en' ? navItem.markdown_en : navItem.markdown_fr;
                             loadMarkdown(markdownFile);
+                            currentContent = navItem.name;
+                            console.log(currentContent);
                         };
                         nav_links.appendChild(link);
 
@@ -154,33 +160,46 @@
                             var sublist = document.createElement('ul'); // 使用列表来表示子部分
                             navItem.subsections.forEach(subsection => {
                                 var sublink = document.createElement('a');
-                                sublink.href = subsection.url;
+                                sublink.href = subsection.url + "&lang=" + currentLanguage;
                                 sublink.textContent = currentLanguage === 'en' ? subsection.name : subsection.name_fr;
                                 sublink.onclick = function (e) {
                                     e.preventDefault();
                                     // 根据当前语言加载对应的 Markdown 文件
                                     const markdownFile = currentLanguage === 'en' ? subsection.markdown_en : subsection.markdown_fr;
                                     loadMarkdown(markdownFile);
+                                    currentContent = subsection.name;
+                                    console.log(currentContent);
                                 };
                                 var listItem = document.createElement('li');
                                 listItem.appendChild(sublink);
                                 sublist.appendChild(listItem);
                             });
-                        nav_links.appendChild(sublist);
+                            nav_links.appendChild(sublist);
                         }
                     });
-                    // 加载默认的 Markdown 文件
-                    const defaultMarkdownFile = currentLanguage === 'en' ? data.defaultmain_content_en : data.defaultmain_content_fr;
-                    loadMarkdown(defaultMarkdownFile);
                 })
                 .catch(error => {
                     console.error('Error loading navigation:', error);
                 });
         }
 
+        function loadContent(targetcontent = currentContent) {
+            // the navigation is stored in a JSON file "navigation.json"
+            fetch('navigation.json')
+                .then(response => response.json()) // access and parse the JSON data
+                .then(data => {
+                    // load the current content markdown file (default is introduction.md)
+                    var load_path = currentLanguage === 'en' ? data.navigation_content[targetcontent].markdown_en : data.navigation_content[targetcontent].markdown_fr;
+                    loadMarkdown(load_path);
+                })
+                .catch(error => {
+                    console.error('Error loading content:', error);
+                });
+        }
+
         window.onload = function () {
-            // 使用 fetch API 获取你的 JSON 文件
-            loadContent();
+            loadSidebar();
+            loadContent('Introduction');
         };
     </script>
 </body>

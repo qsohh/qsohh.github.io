@@ -47,4 +47,5 @@ Hao HUANG
   - Sélectionné pour le programme d'échange.
 
 ## Publication
-- Journal paper: "HHT-α and TR-BDF2 schemes for dynamic contact problems." *Comput Mech* (2023). [https://doi.org/10.1007/s00466-023-02405-9](https://doi.org/10.1007/s00466-023-02405-9) \[ [PDF](https://hal.science/hal-04021471v3) \]
+- Journal paper: "HHT-α and TR-BDF2 schemes for dynamic contact problems." *Comput Mech* (2023). [https://doi.org/10.1007/s00466-023-02405-9](https://doi.org/10.1007/s00466-023-02405-9)
+  - [PDF](https://hal.science/hal-04021471v3)
