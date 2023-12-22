@@ -71,7 +71,7 @@
     <div id="sidebar">
         <!-- language switch -->
         <div id="language-switch">
-            <a href="?lang=en" onclick="switchLanguage('en')">EN</a> | <a href="?lang=fr" onclick="switchLanguage('fr')">FR</a>
+            <a href="#" onclick="switchLanguage('en')">EN</a> | <a href="#" onclick="switchLanguage('fr')">FR</a>
         </div>
 
         <figure>
@@ -105,7 +105,7 @@
                 })
                 .then(markdown => {
                     // console.log("Markdown:", markdown);
-                    const html = marked.marked(markdown);
+                    // const html = marked.marked(markdown);
                     // console.log("Converted HTML:", html);
                     document.getElementById('main-content').innerHTML = marked.marked(markdown);
                 })
@@ -121,11 +121,13 @@
         var currentLanguage = 'en'; // EN is the default language and as we are working with index.html
         var currentContent = 'Introduction'; // introduction.md is the default content
 
-        function switchLanguage(language) {
-            currentLanguage = language; // 更新当前语言
-            // first reload the sidebar, then reload the content
-            loadSidebar();
-            loadContent(currentContent);
+        function switchLanguage(language, content = currentContent) {
+            if (language != currentLanguage) {
+                currentLanguage = language; // 更新当前语言
+                // first reload the sidebar, then reload the content
+                loadSidebar();
+                loadContent(content);
+            }
         }
 
         function loadSidebar() {
