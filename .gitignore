@@ -1,4 +1,14 @@
 
 # ignore local deprecated files and template files
-deprecated/*
-academicpages.github.io-master/*
+deprecated/
+academicpages.github.io-master/
+
+# ignore temporary files created for local jekyll
+_site/
+.jekyll-cache/
+.sass-cache/
+.bundle/
+.DS_Store
+Thumbs.db
+*.log
+Gemfile.lock

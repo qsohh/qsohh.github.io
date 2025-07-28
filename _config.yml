@@ -1,0 +1,24 @@
+# Basic Site Settings
+locale                   : "en-US"
+site_theme               : "default"
+title                    : "Hao HUANG"
+name                     : &name "Hao HUANG"
+description              : &description "PhD in Applied Mathematics · Engineer"
+url                      : "https://qsohh.github.io/"
+baseurl                  : ""
+repository               : "qsohh/qsohh.github.io"
+
+
+author:
+  # avatar           : "profile.png"
+  name             : "Hao HUANG"
+  bio              : "PhD in Mathematics for non-regular dynamics. Building data-driven models and crypto trading systems."
+  location         : "Paris, France"
+  # employer         : "Université de Bourgogne"
+  email            : "qsolivier@gmail.com"
+  github           : "qsohh"
+  linkedin         : "hao-huang-ensta"
+
+include:
+  - _pages
+encoding: "utf-8"
