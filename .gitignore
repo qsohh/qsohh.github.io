@@ -1,0 +1,4 @@
+
+# ignore local deprecated files and template files
+deprecated/*
+academicpages.github.io-master/*
