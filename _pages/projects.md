@@ -36,4 +36,9 @@ This project implements a pipeline for obstacle and lane marking detection from 
 
 ---
 
-### Ray tracing
+### Ray Tracer
+
+<img src="/assets/images/projects_IN104/cover_render.jpg" width="60%">
+
+> Realistic rendering with reflection and shadows using recursive ray tracing.  
+> [View detailed](/projects/raytracer/)

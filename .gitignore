@@ -1,4 +1,7 @@
 
+# VS code workspace
+qsohh.github.io.code-workspace
+
 # ignore local deprecated files and template files
 deprecated/
 academicpages.github.io-master/
