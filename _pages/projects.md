@@ -24,15 +24,7 @@ author_profile: true
 
 ### Image processing - Obstacle and Road Marking Detection via Classical Stereo Vision
 
-This student project implemented a classical computer vision pipeline for detecting obstacles and lane markings using stereo image pairs and disparity maps.
-
-**Main steps included:**
-
-- Preprocessing stereo images using morphological filtering and edge detection.
-- Constructing v-disparity and Hough space representations to identify dominant planes and lane structures.
-- Estimating the road area and detecting obstacles through geometric reasoning based on disparity and color segmentation.
-
-<img src="/assets/images/projects_MIV308/01G.png" width="30%" alt="left image">
+This project implements a pipeline for obstacle and lane marking detection from stereo camera input, using traditional computer vision methods such as disparity estimation, edge detection, and Hough transforms.
 
 <div style="display: flex; flex-wrap: wrap; gap: 10px;">
   <img src="/assets/images/projects_MIV308/01G.png" width="30%" alt="left image">
@@ -40,7 +32,7 @@ This student project implemented a classical computer vision pipeline for detect
   <img src="/assets/images/projects_MIV308/result.jpg" width="30%" alt="result">
 </div>
 
-[View detailed vision demo](/projects/stereovision/)
+> [View detailed](/projects/stereovision/)
 
 ---
 
