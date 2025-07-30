@@ -8,7 +8,7 @@ redirect_from:
   - /about.html
 ---
 
-Hi, I'm a PhD in Applied Mathematics (nonlinear dynamics & contact mechanics), now transitioning into quantitative research and algorithmic trading.
+Hi, I'm a PhD in Applied Mathematics (nonlinear dynamics & contact mechanics). I am especially motivated by quantitative modeling challenges grounded in real data, including financial markets, industrial signals, and complex dynamic systems.
 
 I enjoy building systems that bridge mathematical rigor with real-world decision-making.
 
