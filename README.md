@@ -6,9 +6,12 @@ Built using [Jekyll](https://jekyllrb.com) and the [academicpages](https://githu
 
 ## Key Pages
 
-- `/about`: Personal background and interests
-- `/projects`: Overview of selected projects
-- `/cv`: Academic and technical CV
+- [Personal background and interests](https://qsohh.github.io/)
+- Overview of selected [projects](https://qsohh.github.io/projects/)
+- Academic and technical [CV](https://qsohh.github.io/cv/)
+- [Ray Tracer](https://qsohh.github.io/projects/raytracer/)
+- [Stereo Vision](https://qsohh.github.io/projects/stereovision/)
+- [Railway signaling simulator](https://qsohh.github.io/projects/railway_signaling_simulator/)
 
 ## Tech Stack
 

@@ -32,7 +32,7 @@ This project implements a pipeline for obstacle and lane marking detection from 
   <img src="/assets/images/projects_MIV308/result.jpg" width="30%" alt="result">
 </div>
 
-> [View detailed](/projects/stereovision/)
+> [View full project](/projects/stereovision/)
 
 ---
 
@@ -41,4 +41,17 @@ This project implements a pipeline for obstacle and lane marking detection from 
 <img src="/assets/images/projects_IN104/cover_render.jpg" width="60%">
 
 > Realistic rendering with reflection and shadows using recursive ray tracing.  
-> [View detailed](/projects/raytracer/)
+> [View full project](/projects/raytracer/)
+
+---
+
+### Petit Metro Simulator
+
+Simulates train behavior under CBTC-based signaling systems, modeling tracks, signals, and station control.  
+Includes extensible train dynamic modules, train control system logic, and visualization of simulation results.
+
+<img src="/assets/images/projects_railway_signaling_simulator/ex_simulation.png" width="40%">
+
+> Below is a sample output showing a train adapting to speed limits and signal targets along the track.  
+> [View full project](/projects/railway_signaling_simulator)  
+> [GitHub repo](https://github.com/qsohh/PetitMetroHao)
