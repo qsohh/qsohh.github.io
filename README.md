@@ -23,3 +23,8 @@ Built using [Jekyll](https://jekyllrb.com) and the [academicpages](https://githu
 
 Hao HUANG – Ph.D. in Applied Mathematics  
 Email: qsolivier@gmail.com
+
+#
+
+**TODO**:
+- 添加 toggle theme 改变时 GitHub 和 LeetCode 的亮暗切换
