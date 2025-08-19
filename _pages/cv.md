@@ -64,7 +64,7 @@ Skills
 ======
 
 - **Programming**: Python (advanced), C# (intermediate), C++, R (basic)  
-- **Tools / Libraries**: Git, Linux, LaTeX, Jupyter, PyTorch, scikit-learn, Matlab  
+- **Tools / Libraries**: Git, Linux, LaTeX, Jupyter, QuantLib, PyTorch, scikit-learn, Matlab  
 - **Simulation / Modeling**: Contact mechanics, numerical schemes, formal methods  
 - **Software Engineering**: API integration, algorithm design, real-time data handling
 

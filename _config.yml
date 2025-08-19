@@ -22,4 +22,10 @@ author:
 
 include:
   - _pages
+  - _portfolio
 encoding: "utf-8"
+
+collections:
+  portfolio:
+    output: true
+    permalink: /:collection/:path/

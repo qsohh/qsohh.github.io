@@ -5,12 +5,28 @@ layout: single
 author_profile: true
 ---
 
-### Real-time Crypto Trading Bot
+### Q_Trader – Modular Execution Framework for Binance
 
-- Built a modular bot with signal-based strategy and live execution (backtested and deployed on Binance test net)
-- Integrated WebSocket event listener and real-time volume/price signals
-- Strategy tuning via PyTorch (parameter optimization ongoing)
-- [GitHub repo](https://github.com/qsohh/Binance_Trade)
+- Developed a lightweight trading framework focusing on the execution layer (order placement, balance management, market data retrieval)  
+- Designed a plug-in interface for strategies via a factory pattern, allowing seamless switch between demo and proprietary strategies  
+- Live trading loop supports both Binance Testnet and mainnet, with history logging and periodic strategy re-initialization  
+- Proprietary strategies include adaptive weight models trained with **PyTorch**, which remain private  
+- Released under MIT License (executor open-sourced, proprietary strategies kept private)
+
+> [GitHub repo](https://github.com/qsohh/Q_Trader)
+
+---
+
+### Quommoty – Futures Pricer (QuantLib-based)
+
+A prototype futures pricing framework built in C++ with [QuantLib](https://www.quantlib.org/). Implements a shared pricing interface and specialized pricers for crude oil (cost-of-carry model) and electricity (forward-anchor with delivery averaging).
+
+This is an iterative prototype project, primarily for personal learning and practice.
+
+- Focus: commodity futures pricing models (storable vs. non-storable commodities)
+- Includes demo tests and modular design for extension
+
+> [GitHub repo](https://github.com/qsohh/Quommoty)
 
 ---
 
@@ -18,7 +34,8 @@ author_profile: true
 
 - Modeled patient survival using linear CoxPH (sksurv) model and a PyTorch-based nonlinear DeepSurv model
 - Focused on censored data handling, model interpretability and calibration
-- [GitHub repo](https://github.com/qsohh/Challenge_Data_QRT)
+
+> [GitHub repo](https://github.com/qsohh/Challenge_Data_QRT)
 
 ---
 
